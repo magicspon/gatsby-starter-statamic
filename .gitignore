@@ -4,6 +4,7 @@ tmp
 private
 .netlify
 .htaccess
+public
 
 # test output
 # ---------------------------------------------------------------------
