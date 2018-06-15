@@ -14,7 +14,7 @@ __snapshots/bitmaps_test
 statamic
 site
 local
-.php
+*.php
 
 # gatsby
 # ----------------------------------------------------------------------
