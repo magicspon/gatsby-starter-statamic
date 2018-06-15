@@ -3,6 +3,7 @@
 tmp
 private
 .netlify
+.htaccess
 
 # test output
 # ---------------------------------------------------------------------
@@ -13,6 +14,7 @@ __snapshots/bitmaps_test
 statamic
 site
 local
+.php
 
 # gatsby
 # ----------------------------------------------------------------------
