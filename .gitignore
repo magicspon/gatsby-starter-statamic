@@ -5,6 +5,7 @@ public
 .intermediate-representation/
 .cache/
 yarn.lock
+local
 statamic
 assets
 site
