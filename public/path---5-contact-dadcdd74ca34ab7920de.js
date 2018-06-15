@@ -1,0 +1,2 @@
+webpackJsonp([0x8cbcc1fa36f6],{317:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Gatsby Statamic Starter",author:"Dave Stockley"}},markdownRemark:{id:"/Users/davidstockley/websites/_sandbox/gatsby-starter-statamic/site/content/pages/5.contact/index.md absPath of file >>> MarkdownRemark",html:"<p>Contact me, Niles. </p>",frontmatter:{title:"Contact"}}},pathContext:{template:"/5.contact/",previous:null,next:{fields:{template:"/4.things/"},frontmatter:{title:"Favorite Things"}}}}}});
+//# sourceMappingURL=path---5-contact-dadcdd74ca34ab7920de.js.map

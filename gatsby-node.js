@@ -58,12 +58,22 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 	const { createNodeField } = boundActionCreators
 
-	if (node.internal.type === `MarkdownRemark`) {
+	if (node.internal.type === 'MarkdownRemark') {
 		const value = createFilePath({ node, getNode })
 		createNodeField({
-			name: `template`,
+			name: 'template',
 			node,
 			value
 		})
 	}
+}
+
+exports.modifyWebpackConfig = ({ config }) => {
+	config.merge({
+		resolve: {
+			alias: {
+				'@': `${__dirname}/src`
+			}
+		}
+	})
 }

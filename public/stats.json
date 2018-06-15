@@ -1,0 +1,60 @@
+{
+  "assetsByChunkName": {
+    "path---2-blog": [
+      "path---2-blog-536e56c0e81eb9ec76d0.js",
+      "path---2-blog-536e56c0e81eb9ec76d0.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-a2c81dcf83431604054d.js",
+      "component---src-pages-index-js-a2c81dcf83431604054d.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-9e1017703d610ffda7ed.js",
+      "component---src-templates-blog-post-js-9e1017703d610ffda7ed.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-89b7c12cba8f21d8e9e7.js",
+      "component---src-layouts-index-js-89b7c12cba8f21d8e9e7.js.map"
+    ],
+    "path---index": [
+      "path---index-a50e124bb4e45485b714.js",
+      "path---index-a50e124bb4e45485b714.js.map"
+    ],
+    "path---5-contact": [
+      "path---5-contact-dadcdd74ca34ab7920de.js",
+      "path---5-contact-dadcdd74ca34ab7920de.js.map"
+    ],
+    "commons": [
+      "commons-2cf80492d067fcfed4d6.js",
+      "commons-2cf80492d067fcfed4d6.js.map"
+    ],
+    "path---3-gallery": [
+      "path---3-gallery-cf68157db31347bc47ba.js",
+      "path---3-gallery-cf68157db31347bc47ba.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---4-things": [
+      "path---4-things-bccd9d8a6d8007e989a3.js",
+      "path---4-things-bccd9d8a6d8007e989a3.js.map"
+    ],
+    "path---1-about": [
+      "path---1-about-a95c2b947ebf0d8e5881.js",
+      "path---1-about-a95c2b947ebf0d8e5881.js.map"
+    ],
+    "app": [
+      "app-2df0b3e294a060992f59.js",
+      "app-2df0b3e294a060992f59.js.map"
+    ]
+  }
+}

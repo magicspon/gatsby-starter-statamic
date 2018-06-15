@@ -7,14 +7,19 @@
 		"url": "https://github.com/magicspon/gatsby-starter-statamic/issues"
 	},
 	"dependencies": {
+		"autoprefixer": "^8.6.2",
+		"babel-plugin-ramda": "^1.6.1",
 		"emotion": "^9.2.3",
+		"emotion-server": "^9.2.3",
 		"gatsby": "^1.8.12",
 		"gatsby-link": "^1.6.8",
+		"gatsby-plugin-emotion": "^1.1.17",
 		"gatsby-plugin-google-analytics": "^1.0.4",
 		"gatsby-plugin-manifest": "^1.0.4",
 		"gatsby-plugin-offline": "^1.0.4",
 		"gatsby-plugin-preact": "^1.0.3",
 		"gatsby-plugin-react-helmet": "^1.0.3",
+		"gatsby-plugin-react-next": "^1.0.11",
 		"gatsby-plugin-sharp": "^1.6.2",
 		"gatsby-remark-copy-linked-files": "^1.5.2",
 		"gatsby-remark-images": "^1.5.4",
@@ -22,11 +27,17 @@
 		"gatsby-remark-responsive-iframe": "^1.4.3",
 		"gatsby-remark-smartypants": "^1.4.3",
 		"gatsby-source-filesystem": "^1.4.3",
+		"gatsby-spon-scss-postcss": "^0.0.1",
 		"gatsby-transformer-remark": "^1.7.1",
 		"gatsby-transformer-sharp": "^1.6.1",
 		"lodash": "^4.15.0",
+		"postcss": "^6.0.22",
+		"postcss-loader": "^2.1.5",
 		"ramda": "^0.25.0",
-		"tailwindcss": "^0.5.3"
+		"react-emotion": "^9.2.3",
+		"tailwindcss": "^0.5.3",
+		"tailwindcss-alpha": "^0.1.1",
+		"tailwindcss-fluid": "^0.2.0"
 	},
 	"devDependencies": {
 		"babel-eslint": "^8.2.3",

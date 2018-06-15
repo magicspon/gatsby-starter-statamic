@@ -4,6 +4,28 @@ module.exports = {
 		author: 'Dave Stockley'
 	},
 	plugins: [
+		'gatsby-plugin-react-next',
+		{
+			resolve: 'gatsby-spon-scss-postcss'
+		},
+		{
+			resolve: 'gatsby-plugin-emotion',
+			options: {
+				hoist: false,
+				sourceMap: false,
+				autoLabel: false,
+				labelFormat: '[local]',
+				extractStatic: true,
+				outputDir: '',
+				importedNames: {
+					styled: 'styled',
+					css: 'css',
+					keyframes: 'keyframes',
+					injectGlobal: 'injectGlobal',
+					merge: 'merge'
+				}
+			}
+		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
@@ -35,13 +57,13 @@ module.exports = {
 		},
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
-		{
-			resolve: 'gatsby-plugin-google-analytics',
-			options: {
-				// trackingId: `ADD YOUR TRACKING ID HERE`,
-			}
-		},
-		'gatsby-plugin-offline',
+		// {
+		// 	resolve: 'gatsby-plugin-google-analytics',
+		// 	options: {
+		// 		// trackingId: `ADD YOUR TRACKING ID HERE`,
+		// 	}
+		// },
+		// 'gatsby-plugin-offline',
 		'gatsby-plugin-react-helmet'
 	]
 }

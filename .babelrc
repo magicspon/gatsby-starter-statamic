@@ -11,19 +11,7 @@
 		]
 	],
 	"plugins": [
-		"transform-object-rest-spread",
-		"transform-class-properties",
-		"syntax-dynamic-import",
-		"transform-async-to-generator",
-
-		[
-			"transform-regenerator",
-			{
-				"asyncGenerators": true,
-				"generators": true,
-				"async": true
-			}
-		]
+		"babel-plugin-tailwind"
 	],
 
 	"env": {
@@ -35,8 +23,6 @@
 		},
 		"test": {
 			"plugins": [
-				"transform-es2015-modules-commonjs",
-				"dynamic-import-node",
 				[
 					"module-resolver",
 					{
