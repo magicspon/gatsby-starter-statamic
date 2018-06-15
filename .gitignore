@@ -15,6 +15,12 @@ statamic
 site
 local
 *.php
+phpunit.xml
+please
+web.config
+.travis.yml
+.env
+robots.txt
 
 # gatsby
 # ----------------------------------------------------------------------
