@@ -1,4 +1,4 @@
-const _ = require('lodash')
+const R = require('ramda')
 const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
@@ -7,19 +7,23 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 	const { createPage } = boundActionCreators
 
 	return new Promise((resolve, reject) => {
-		const blogPost = path.resolve('./src/templates/blog-post.js')
+		const blogPost = path.resolve('./src/templates/single.js')
 		resolve(
 			graphql(
 				`
 					{
-						allMarkdownRemark {
+						allFile(filter: { sourceInstanceName: { eq: "single" } }) {
 							edges {
 								node {
-									fields {
-										template
-									}
-									frontmatter {
-										title
+									sourceInstanceName
+									relativeDirectory
+									childMarkdownRemark {
+										id
+										frontmatter {
+											id
+											title
+										}
+										html
 									}
 								}
 							}
@@ -32,24 +36,33 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 					reject(result.errors)
 				}
 
-				// Create blog posts pages.
-				const posts = result.data.allMarkdownRemark.edges
+				const posts = result.data.allFile.edges
 
-				_.each(posts, (post, index) => {
-					const previous =
-						index === posts.length - 1 ? null : posts[index + 1].node
-					const next = index === 0 ? null : posts[index - 1].node
+				R.forEach(post => {
+					const {
+						node: {
+							relativeDirectory,
+							childMarkdownRemark: {
+								frontmatter: { title, id }
+							}
+						}
+					} = post
+
+					const slug =
+						relativeDirectory === '' ? '/' : relativeDirectory.split('.')[1]
 
 					createPage({
-						path: post.node.fields.template,
+						path: slug,
 						component: blogPost,
+						relativeDirectory,
 						context: {
-							template: post.node.fields.template,
-							previous,
-							next
+							title,
+							id,
+							slug,
+							relativeDirectory
 						}
 					})
-				})
+				})(posts)
 			})
 		)
 	})

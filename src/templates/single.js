@@ -7,13 +7,11 @@ import Bio from '../components/Bio'
 
 class BlogPostTemplate extends React.Component {
 	render() {
-		const post = this.props.data.markdownRemark
-		const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-		const { previous, next } = this.props.pathContext
+		console.log(this.props)
 
 		return (
 			<div>
-				<Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+				{/* <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
 				<h1>{post.frontmatter.title}</h1>
 				<p>{post.frontmatter.date}</p>
 				<div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -36,7 +34,7 @@ class BlogPostTemplate extends React.Component {
 							</Link>
 						</li>
 					)}
-				</ul>
+				</ul> */}
 			</div>
 		)
 	}
@@ -45,18 +43,26 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-	query BlogPostBySlug($template: String!) {
+	query BlogPostBySlug($relativeDirectory: String!) {
 		site {
 			siteMetadata {
 				title
 				author
 			}
 		}
-		markdownRemark(fields: { template: { eq: $template } }) {
-			id
-			html
-			frontmatter {
-				title
+		allFile(filter: { relativeDirectory: { eq: $relativeDirectory } }) {
+			edges {
+				node {
+					sourceInstanceName
+					relativeDirectory
+					childMarkdownRemark {
+						frontmatter {
+							id
+							title
+						}
+						html
+					}
+				}
 			}
 		}
 	}

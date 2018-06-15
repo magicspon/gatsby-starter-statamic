@@ -30,7 +30,7 @@ module.exports = {
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				path: `${__dirname}/site/content/pages/`,
-				name: 'pages'
+				name: 'single'
 			}
 		},
 		{
