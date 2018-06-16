@@ -5,6 +5,7 @@ private
 .netlify
 .htaccess
 public
+tailwind.custom.css
 
 # test output
 # ---------------------------------------------------------------------
