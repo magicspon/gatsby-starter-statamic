@@ -9,6 +9,7 @@
 	"dependencies": {
 		"autoprefixer": "^8.6.2",
 		"babel-plugin-ramda": "^1.6.1",
+		"babel-plugin-trace": "^1.1.0",
 		"emotion": "^9.2.3",
 		"emotion-server": "^9.2.3",
 		"gatsby": "^1.8.12",

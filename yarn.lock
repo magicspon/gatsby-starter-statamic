@@ -1026,6 +1026,10 @@ babel-plugin-tailwind@^0.1.10:
     postcss-js "^1.0.1"
     tailwindcss "^0.4.1"
 
+babel-plugin-trace@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-trace/-/babel-plugin-trace-1.1.0.tgz#d263064904a4b05086a87f07e40d9ec5d3c539af"
+
 babel-plugin-transform-amd-system-wrapper@^0.3.7:
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-amd-system-wrapper/-/babel-plugin-transform-amd-system-wrapper-0.3.7.tgz#521c782d35644491c979ea683e8a5e1caff0ba42"

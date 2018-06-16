@@ -16,10 +16,10 @@
 
 	"env": {
 		"development": {
-			"plugins": ["ramda"]
+			"plugins": ["ramda", "babel-plugin-tailwind"]
 		},
 		"production": {
-			"plugins": ["ramda"]
+			"plugins": ["ramda", "babel-plugin-tailwind"]
 		},
 		"test": {
 			"plugins": [

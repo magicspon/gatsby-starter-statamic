@@ -20,8 +20,7 @@ class GalleryIndex extends React.Component {
 				<div className={css(tw('flex flex-wrap'))}>
 					{images.map((img, index) => (
 						<div key={index} className={css(tw('bg-red w-4/24 mb-2'))}>
-							{/* <Img sizes={img.childImageSharp.sizes} /> */}
-							hello
+							<Img sizes={img.childImageSharp.sizes} />
 						</div>
 					))}
 				</div>
