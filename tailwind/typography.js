@@ -1,4 +1,4 @@
-const { color } = require('./colors')
+const { colors } = require('./colors')
 const { px2rem, msRange } = require('./tailwind.utils')
 
 /*
@@ -138,7 +138,7 @@ const tracking = {
   |
   */
 
-const textColors = color
+const textColors = colors
 
 module.exports = {
 	fonts,

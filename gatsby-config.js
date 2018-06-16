@@ -11,19 +11,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-emotion',
 			options: {
-				hoist: false,
-				sourceMap: false,
-				autoLabel: false,
-				labelFormat: '[local]',
-				extractStatic: true,
-				outputDir: '',
-				importedNames: {
-					styled: 'styled',
-					css: 'css',
-					keyframes: 'keyframes',
-					injectGlobal: 'injectGlobal',
-					merge: 'merge'
-				}
+				extractStatic: true
 			}
 		},
 

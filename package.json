@@ -75,7 +75,10 @@
 		"url": "git+https://github.com/magicspon/gatsby-starter-statamic.git"
 	},
 	"scripts": {
+		"build:tailwind": "./node_modules/.bin/tailwind build ./tailwind/styles.css -c ./tailwind.js -o ./tailwind.custom.css",
 		"develop": "gatsby develop --https",
+		"prestart": "npm run build:tailwind",
+		"prebuild": "npm run build:tailwind",
 		"start": "npm run develop",
 		"serve": "gatsby serve --https",
 		"build": "gatsby build",

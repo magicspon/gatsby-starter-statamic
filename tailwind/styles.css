@@ -1,0 +1,9 @@
+/**
+  this file gets generated on start and build and is used by 
+  emotion/babel-tailwind.
+*/
+
+
+@tailwind utilities;
+@tailwind screens;
+

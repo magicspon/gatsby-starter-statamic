@@ -16,10 +16,12 @@ class GalleryIndex extends React.Component {
 		return (
 			<div>
 				<Helmet title={siteTitle} />
-				<h1>{title}</h1>
+				<div className={css(tw('py-4 px-2'))}>
+					<h1 className={css(tw('text-red mb-2'))}>{title}</h1>
+				</div>
 				<div className={css(tw('flex flex-wrap'))}>
 					{images.map((img, index) => (
-						<div key={index} className={css(tw('bg-red w-4/24 mb-2'))}>
+						<div key={index} className={css(tw('w-1/3 p-2'))}>
 							<Img sizes={img.childImageSharp.sizes} />
 						</div>
 					))}
