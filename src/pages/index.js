@@ -4,27 +4,32 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import { css } from 'emotion'
 
-import Bio from '../components/Bio'
-
 class BlogIndex extends React.Component {
 	render() {
 		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-		const posts = get(this, 'props.data.allMarkdownRemark.edges')
-
+		const posts = get(this, 'props.data.allFile.edges')
 		return (
 			<div>
 				<Helmet title={siteTitle} />
-				{/* <Bio />
+
 				{posts.map(({ node }, index) => {
-					const title = get(node, 'frontmatter.title') || node.fields.slug
+					const title = get(node, 'childMarkdownRemark.frontmatter.title')
+					const link = `/blog/${get(node, 'name').split('.')[1]}/`
 					return (
-						<div key={index} className={css(tw('bg-black'))}>
-							<h3 className={css(tw('bg-black text-white'))}>{title}</h3>
-							<small>{node.frontmatter.date}</small>
-							<p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+						<div
+							key={get(node, 'childMarkdownRemark.frontmatter.id')}
+							className={css(tw('mb-2'))}
+						>
+							<h3>{title}</h3>
+							<p
+								dangerouslySetInnerHTML={{
+									__html: node.childMarkdownRemark.excerpt
+								}}
+							/>
+							<Link to={link}>Read more</Link>
 						</div>
 					)
-				})} */}
+				})}
 			</div>
 		)
 	}
@@ -39,15 +44,20 @@ export const pageQuery = graphql`
 				title
 			}
 		}
-		allMarkdownRemark {
+		allFile(
+			limit: 3
+			filter: { sourceInstanceName: { eq: "blog" }, name: { ne: "folder" } }
+		) {
 			edges {
 				node {
-					excerpt
-					fields {
-						template
-					}
-					frontmatter {
-						title
+					name
+					childMarkdownRemark {
+						frontmatter {
+							title
+							id
+						}
+						excerpt
+						html
 					}
 				}
 			}

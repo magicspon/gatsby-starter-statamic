@@ -42,6 +42,13 @@ module.exports = {
 			}
 		},
 		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				path: `${__dirname}/site/content/collections/blog/`,
+				name: 'blog'
+			}
+		},
+		{
 			resolve: 'gatsby-transformer-remark',
 			options: {
 				plugins: [

@@ -5,10 +5,9 @@ import get from 'lodash/get'
 
 import Bio from '../components/Bio'
 
-class BlogPostTemplate extends React.Component {
+class SinglePostTemplate extends React.Component {
 	render() {
 		console.log(this.props)
-
 		return (
 			<div>
 				{/* <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
@@ -40,10 +39,10 @@ class BlogPostTemplate extends React.Component {
 	}
 }
 
-export default BlogPostTemplate
+export default SinglePostTemplate
 
 export const pageQuery = graphql`
-	query BlogPostBySlug($relativeDirectory: String!) {
+	query SinglePostBySlug($relativeDirectory: String!) {
 		site {
 			siteMetadata {
 				title
