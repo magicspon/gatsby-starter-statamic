@@ -3,6 +3,9 @@ const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+// gatsby-node.js
+const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+
 exports.createPages = ({ graphql, boundActionCreators }) => {
 	const { createPage } = boundActionCreators
 
@@ -40,12 +43,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
 				R.forEach(post => {
 					const {
-						node: {
-							relativeDirectory,
-							childMarkdownRemark: {
-								frontmatter: { title, id }
-							}
-						}
+						node: { relativeDirectory }
 					} = post
 
 					const slug =
@@ -56,8 +54,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 						component: blogPost,
 						relativeDirectory,
 						context: {
-							title,
-							id,
 							slug,
 							relativeDirectory
 						}
@@ -70,6 +66,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 	const { createNodeField } = boundActionCreators
+
+	fmImagesToRelative(node)
 
 	if (node.internal.type === 'MarkdownRemark') {
 		const value = createFilePath({ node, getNode })

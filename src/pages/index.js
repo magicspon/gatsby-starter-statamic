@@ -14,7 +14,7 @@ class BlogIndex extends React.Component {
 		return (
 			<div>
 				<Helmet title={siteTitle} />
-				<Bio />
+				{/* <Bio />
 				{posts.map(({ node }, index) => {
 					const title = get(node, 'frontmatter.title') || node.fields.slug
 					return (
@@ -24,7 +24,7 @@ class BlogIndex extends React.Component {
 							<p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
 						</div>
 					)
-				})}
+				})} */}
 			</div>
 		)
 	}
